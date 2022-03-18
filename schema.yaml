@@ -98,13 +98,40 @@ variableGroups:
     - node_pool_name
 
 - title: "API Gateway"
+  visible: true
   variables:
     - api_gateway_name
     - api_gateway_type
 
 - title: "APM"
+  visible: true
   variables:
    - apm_diplay_name
+
+- title: "Repository"
+  visible: true
+  variables:
+   - repository_is_immutable
+   - repository_repository_type
+   - artifact_repository_display_name
+   - container_repository_display_name 
+
+- title: "Stream"
+  visible: true
+  variables:
+   - stream_pool_name
+   - stream_name
+   - stream_partitions
+
+- title: "Object Storage"
+  visible: true
+  variables:
+   - bucket_name
+
+- title: "Functions"
+  visible: true
+  variables:
+   - application_display_name
 
 #################
 # Output Groups
@@ -565,6 +592,52 @@ variables:
     #default: "APM FT"
     required: true
 
+# Repository
 
+  repository_is_immutable:
+      type: boolean
+      title: Respositório é Imutável?
+      required: true
 
+  repository_repository_type:
+      type: string
+      title: Tipo de Repositório
+      required: true
 
+    
+  artifact_repository_display_name:
+      type: string
+      title: Nome do Respositório de Artefatos
+      required: true
+
+  container_repository_display_name:
+    type: string
+    title: Nome da Imagem de container 
+    required: true
+
+  # Stream 
+
+  stream_pool_name:
+      type: string
+      title: "Nome do Stream Pool"
+      required: true
+
+  stream_name:
+      type: string
+      title: "Nome do Stream"
+      required: true
+
+  stream_partitions:
+      type: number 
+      title: Stream Partitions
+      required: true
+
+  bucket_name:
+      type: string
+      title: "Nome do Object Storage"
+      required: true
+
+  application_display_name:
+      type: string
+      title: "Nome do Aplicação no Functions"
+      required: true

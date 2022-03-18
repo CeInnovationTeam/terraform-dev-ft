@@ -47,7 +47,7 @@ variable "artifact_repository_display_name" {
 }
 
 variable "container_repository_display_name" {
-  default     = "container_repository"
+  default     = "java-img"
   description = "Nome do repositório de container"
 }
 
@@ -66,10 +66,6 @@ variable "stream_partitions"{
 
 variable "bucket_name"{
   default = "workshop_bucket"
-}
-
-variable "bucket_namespace"{
-  default = "gry3dfiafsfu"
 }
 
 variable "application_display_name"{
