@@ -13,9 +13,9 @@ module "oci-oke" {
   cluster_options_add_ons_is_tiller_enabled                                   = false
   cluster_options_admission_controller_options_is_pod_security_policy_enabled = var.cluster_options_admission_controller_options_is_pod_security_policy_enabled
   pool_name                                                                   = var.node_pool_name
-  node_shape                                                                  = var.node_pool_shape
-  node_ocpus                                                                  = var.node_pool_node_shape_config_ocpus
-  node_memory                                                                 = var.node_pool_node_shape_config_memory_in_gbs
+  node_shape                                                                  = "VM.Standard2.1"
+  #node_ocpus                                                                  = var.node_pool_node_shape_config_ocpus
+  #node_memory                                                                 = var.node_pool_node_shape_config_memory_in_gbs
   node_count                                                                  = var.num_pool_workers
   node_pool_boot_volume_size_in_gbs                                           = var.node_pool_boot_volume_size_in_gbs
   k8s_version                                                                 = (var.k8s_version == "Latest") ? local.cluster_k8s_latest_version : var.k8s_version
