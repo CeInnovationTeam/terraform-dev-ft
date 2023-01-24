@@ -318,7 +318,7 @@ variables:
     type: enum
     enum: # Necessary hardcoded supported versions, as ORM does not retrieve the versions from OKE.
     - "Latest"
-    - "v1.23.4"
+    - "v1.25.4"
     title: "Kubernetes Version"
     required: true
     visible:
